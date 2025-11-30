@@ -20,10 +20,10 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .topbar-top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .brand{display:flex;align-items:center;gap:14px}
 
-/* LOGO: maximized size (large) */
+/* LOGO: .brand-logo-img in your HTML — set to medium (48px) */
 .brand-logo-img{
-  width:140px;       /* MAXIMIZED LOGO WIDTH */
-  height:140px;      /* MAXIMIZED LOGO HEIGHT */
+  width:50px;        /* MEDIUM SIZE */
+  height:50px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -40,19 +40,11 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   display:block;
 }
 
-/* Slightly smaller on wide tablets / medium screens */
-@media (max-width:1000px){
-  .brand-logo-img{
-    width:120px;
-    height:120px;
-  }
-}
-
-/* Smaller on phones */
+/* Slightly smaller on small screens */
 @media (max-width:640px){
   .brand-logo-img{
-    width:90px;
-    height:90px;
+    width:42px;
+    height:42px;
   }
 }
 
@@ -62,6 +54,46 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 /* top-right items */
 .top-right{display:flex;gap:18px;align-items:center}
 .top-icons{display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,0.95)}
+
+/* ---------- SOCIAL ICONS (HORIZONTAL + WHITE) ---------- */
+.socials{
+  display:flex;            /* horizontal layout */
+  flex-direction:row;      /* ensure row direction */
+  align-items:center;
+  gap:10px;
+  margin-left:8px;
+}
+
+.socials .social-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:26px;
+  height:26px;
+  text-decoration:none;
+  opacity:0.95;
+}
+
+.socials .social-link svg{
+  width:20px;
+  height:20px;
+  fill: #ffffff;           /* icon color -> white */
+  transition: transform .14s ease, opacity .14s ease;
+  display:block;
+}
+
+.socials .social-link:hover svg{
+  transform:translateY(-2px);
+  opacity:1;
+}
+
+/* adjust icon sizing on small screens */
+@media (max-width:640px){
+  .socials .social-link{ width:22px; height:22px; }
+  .socials .social-link svg{ width:18px; height:18px; }
+}
+/* ------------------------------------------------------- */
+
 .socials span{margin-left:8px;opacity:0.85}
 
 /* MAIN NAV */
@@ -141,41 +173,5 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   .footer-grid{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:1fr}
   .call-btn-large,.call-btn{width:100%;text-align:center}
-}
-/* Social icons styling (SVG links) */
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 10px;            /* spacing between icons */
-  margin-left: 8px;
-}
-
-.socials .social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  text-decoration: none;
-  opacity: 0.95;
-}
-
-.socials .social-link svg {
-  width: 18px;
-  height: 18px;
-  fill: rgba(255,255,255,0.95); /* icon color */
-  transition: transform .14s ease, opacity .14s ease;
-  display: block;
-}
-
-.socials .social-link:hover svg {
-  transform: translateY(-2px);
-  opacity: 1;
-}
-
-/* adjust icon sizing on small screens */
-@media (max-width:640px){
-  .socials .social-link { width:20px; height:20px; }
-  .socials .social-link svg { width:16px; height:16px; }
 }
 
