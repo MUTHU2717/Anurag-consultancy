@@ -1,10 +1,10 @@
 :root{
-  --nav:#1a0f0f; /* RCB dark black-red */ /* pure black */ /* professional deep navy */ /* neon purple */ /* corporate navy blue */ /* pastel light blue */ /* warm deep orange-brown */ /* pure black */ /* dark desaturated blue */ /* new deep blue */ /* deep navy - updated */
-  --accent:#d4af37; /* RCB gold */ /* strong red */ /* modern teal accent */ /* neon green */ /* clean professional blue */ /* pastel pink */ /* bright warm orange */ /* premium gold */ /* bold red */ /* new golden yellow */ /* vibrant orange */
-  --muted:#c9b37c; /* muted gold beige */ /* soft gray for contrast */ /* clean muted gray-blue */ /* soft neon pastel pink */ /* soft corporate gray */ /* pastel mint */ /* soft warm beige */ /* muted gold-beige */ /* light gray */ /* new soft gray-blue */ /* muted blue-gray */
-  --light-blue:#e10600; /* RCB bright red */ /* bright red highlight */ /* corporate light blue */ /* neon cyan */ /* light business blue */ /* baby blue */ /* light peach-orange */ /* soft luxury gold */ /* icy cyan */ /* new aqua */ /* bright sky blue */
-  --dark-blue:#000000; /* pure black */ /* deep black */ /* strong dark corporate blue */ /* deep neon indigo */ /* strong corporate dark blue */ /* soft gray-blue */ /* dark warm brown */ /* deep black */ /* deep cold navy */ /* new darkest teal */ /* ultra dark blue */
-  --footer:#140c0c; /* deep black-maroon */ /* dark charcoal black */ /* elegant dark footer tone */ /* neon dark base */ /* slate gray-blue */ /* pastel olive gray */ /* rich dark terracotta */ /* black charcoal */ /* graphite gray */ /* new navy slate */ /* charcoal teal */
+  --nav:#1a0f0f; /* RCB dark black-red */
+  --accent:#d4af37; /* RCB gold */
+  --muted:#c9b37c;
+  --light-blue:#e10600;
+  --dark-blue:#000000;
+  --footer:#140c0c;
   --container:1150px;
   --max-width:1150px;
   --radius:6px;
@@ -19,7 +19,36 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .topbar{background:var(--nav);color:white}
 .topbar-top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .brand{display:flex;align-items:center;gap:14px}
-.brand-logo{width:66px;height:66px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--dark-blue);font-size:26px}
+
+/* <-- LOGO: reduced size and responsive image inside -->
+.brand-logo{
+  /* reduced from 66px to 48px for a smaller logo */
+  width:48px;
+  height:48px;
+  background:var(--accent);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  color:var(--dark-blue);
+  font-size:20px;
+  overflow:hidden; /* in case image is larger */
+}
+
+/* Ensure any img inside scales to the container and keeps aspect-ratio */
+.brand-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+/* If you prefer an even smaller logo on mobile, this adjusts it */
+@media (max-width:640px){
+  .brand-logo{width:40px;height:40px;font-size:16px}
+}
+
 .brand-text .b1{display:block;font-weight:800;letter-spacing:1px}
 .brand-text .b2{display:block;font-size:13px;color:rgba(255,255,255,0.85);margin-top:2px}
 
