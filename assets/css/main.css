@@ -20,10 +20,10 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .topbar-top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .brand{display:flex;align-items:center;gap:14px}
 
-/* LOGO: .brand-logo-img in your HTML — set to medium (48px) */
+/* LOGO: maximized size (large) */
 .brand-logo-img{
-  width:50px;        /* MEDIUM SIZE */
-  height:50px;
+  width:140px;       /* MAXIMIZED LOGO WIDTH */
+  height:140px;      /* MAXIMIZED LOGO HEIGHT */
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -40,11 +40,19 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   display:block;
 }
 
-/* Slightly smaller on small screens */
+/* Slightly smaller on wide tablets / medium screens */
+@media (max-width:1000px){
+  .brand-logo-img{
+    width:120px;
+    height:120px;
+  }
+}
+
+/* Smaller on phones */
 @media (max-width:640px){
   .brand-logo-img{
-    width:42px;
-    height:42px;
+    width:90px;
+    height:90px;
   }
 }
 
@@ -134,3 +142,4 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   .stats-inner{grid-template-columns:1fr}
   .call-btn-large,.call-btn{width:100%;text-align:center}
 }
+
