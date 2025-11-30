@@ -22,13 +22,13 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 
 /* LOGO: .brand-logo-img in your HTML — set to medium (48px) */
 .brand-logo-img{
-  width:48px;        /* MEDIUM SIZE */
-  height:48px;
+  width:50px;        /* MEDIUM SIZE */
+  height:50px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
-  border-radius:6px;
+  border-radius:8px;
   background:transparent; /* keep transparent so logo background shows through */
 }
 
@@ -43,8 +43,8 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 /* Slightly smaller on small screens */
 @media (max-width:640px){
   .brand-logo-img{
-    width:40px;
-    height:40px;
+    width:42px;
+    height:42px;
   }
 }
 
