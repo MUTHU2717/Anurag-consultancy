@@ -20,20 +20,19 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .topbar-top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .brand{display:flex;align-items:center;gap:14px}
 
-/* LOGO: target .brand-logo-img used in your HTML
-   Set small fixed container and scale the inner image */
+/* LOGO: .brand-logo-img in your HTML — set to medium (48px) */
 .brand-logo-img{
-  width:36px;        /* desired logo size */
-  height:36px;
+  width:48px;        /* MEDIUM SIZE */
+  height:48px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
-  border-radius:5px; /* slightly rounded */
+  border-radius:6px;
   background:transparent; /* keep transparent so logo background shows through */
 }
 
-/* Ensure the actual image fits inside the small box */
+/* Ensure the actual image fits inside the box */
 .brand-logo-img img{
   width:100%;
   height:100%;
@@ -41,11 +40,11 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   display:block;
 }
 
-/* even smaller on very small screens */
+/* Slightly smaller on small screens */
 @media (max-width:640px){
   .brand-logo-img{
-    width:30px;
-    height:30px;
+    width:40px;
+    height:40px;
   }
 }
 
@@ -71,7 +70,7 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .intro h1{font-family:'Montserrat',sans-serif;color:var(--accent);font-size:56px;margin:0 0 12px;font-weight:800}
 .intro-body{display:flex;gap:28px;align-items:flex-start}
 .intro-text{flex:1;font-size:18px;line-height:1.8;color:#071033}
-.intro-text p{margin:18px 0}
+.intro-text p{Margin:18px 0}
 
 /* CALL BUTTON (right) */
 .intro-side{width:320px;display:flex;align-items:flex-start;justify-content:flex-end}
@@ -135,4 +134,3 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   .stats-inner{grid-template-columns:1fr}
   .call-btn-large,.call-btn{width:100%;text-align:center}
 }
-
