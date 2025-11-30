@@ -23,8 +23,8 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 /* LOGO: target .brand-logo-img used in your HTML
    Set small fixed container and scale the inner image */
 .brand-logo-img{
-  width:28px;        /* desired logo size */
-  height:28px;
+  width:36px;        /* desired logo size */
+  height:36px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -44,8 +44,8 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 /* even smaller on very small screens */
 @media (max-width:640px){
   .brand-logo-img{
-    width:24px;
-    height:24px;
+    width:30px;
+    height:30px;
   }
 }
 
