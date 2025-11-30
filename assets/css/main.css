@@ -142,4 +142,40 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   .stats-inner{grid-template-columns:1fr}
   .call-btn-large,.call-btn{width:100%;text-align:center}
 }
+/* Social icons styling (SVG links) */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;            /* spacing between icons */
+  margin-left: 8px;
+}
+
+.socials .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+.socials .social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255,255,255,0.95); /* icon color */
+  transition: transform .14s ease, opacity .14s ease;
+  display: block;
+}
+
+.socials .social-link:hover svg {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* adjust icon sizing on small screens */
+@media (max-width:640px){
+  .socials .social-link { width:20px; height:20px; }
+  .socials .social-link svg { width:16px; height:16px; }
+}
 
