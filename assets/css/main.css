@@ -1,6 +1,6 @@
 :root{
-  --nav:#1a0f0f; /* RCB dark black-red */
-  --accent:#d4af37; /* RCB gold */
+  --nav:#1a0f0f;
+  --accent:#d4af37;
   --muted:#c9b37c;
   --light-blue:#e10600;
   --dark-blue:#000000;
@@ -20,23 +20,19 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .topbar-top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .brand{display:flex;align-items:center;gap:14px}
 
-/* <-- LOGO: reduced size and responsive image inside -->
+/* LOGO (REDUCED TO 28PX) */
 .brand-logo{
-  /* reduced from 66px to 48px for a smaller logo */
-  width:48px;
-  height:48px;
+  width:28px;        /* REDUCED FROM 36px → 28px */
+  height:28px;
   background:var(--accent);
-  border-radius:8px;
+  border-radius:5px;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-weight:800;
-  color:var(--dark-blue);
-  font-size:20px;
-  overflow:hidden; /* in case image is larger */
+  overflow:hidden;
 }
 
-/* Ensure any img inside scales to the container and keeps aspect-ratio */
+/* ensure image scales smoothly */
 .brand-logo img{
   width:100%;
   height:100%;
@@ -44,9 +40,12 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   display:block;
 }
 
-/* If you prefer an even smaller logo on mobile, this adjusts it */
+/* even smaller on mobile (optional) */
 @media (max-width:640px){
-  .brand-logo{width:40px;height:40px;font-size:16px}
+  .brand-logo{
+    width:24px;
+    height:24px;
+  }
 }
 
 .brand-text .b1{display:block;font-weight:800;letter-spacing:1px}
@@ -64,7 +63,7 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .mainnav li.active a{color:var(--accent)}
 .nav-right{display:flex;align-items:center;gap:18px}
 .vert-line{width:1px;height:40px;background:rgba(255,255,255,0.04)}
-.phone{background:rgba(0,0,0,0.18);padding:10px 16px;border-radius:4px; font-weight:700}
+.phone{background:rgba(0,0,0,0.18);padding:10px 16px;border-radius:4px;font-weight:700}
 
 /* INTRO */
 .intro{padding:36px 0 18px}
