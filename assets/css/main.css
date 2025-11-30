@@ -20,29 +20,30 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .topbar-top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .brand{display:flex;align-items:center;gap:14px}
 
-/* LOGO (REDUCED TO 28PX) */
-.brand-logo{
-  width:28px;        /* REDUCED FROM 36px → 28px */
+/* LOGO: target .brand-logo-img used in your HTML
+   Set small fixed container and scale the inner image */
+.brand-logo-img{
+  width:28px;        /* desired logo size */
   height:28px;
-  background:var(--accent);
-  border-radius:5px;
-  display:flex;
+  display:inline-flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
+  border-radius:5px; /* slightly rounded */
+  background:transparent; /* keep transparent so logo background shows through */
 }
 
-/* ensure image scales smoothly */
-.brand-logo img{
+/* Ensure the actual image fits inside the small box */
+.brand-logo-img img{
   width:100%;
   height:100%;
   object-fit:contain;
   display:block;
 }
 
-/* even smaller on mobile (optional) */
+/* even smaller on very small screens */
 @media (max-width:640px){
-  .brand-logo{
+  .brand-logo-img{
     width:24px;
     height:24px;
   }
@@ -134,3 +135,4 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   .stats-inner{grid-template-columns:1fr}
   .call-btn-large,.call-btn{width:100%;text-align:center}
 }
+
