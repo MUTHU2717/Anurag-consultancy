@@ -178,39 +178,41 @@
 
         <div class="contact-form-wrap" role="region" aria-labelledby="contact-heading">
           <!-- The form posts to a placeholder. Replace action with your real endpoint or mail handler -->
-          <form action="send-mail.php" method="post">
-            <div class="form-grid">
-              <div>
-                <label class="field-label" for="name">Your Name</label>
-                <input id="name" name="name" type="text" class="input" placeholder="Your Name" required>
-              </div>
+          <form action="send-mail.php" method="post" novalidate>
+  <div class="form-grid">
 
-              <div>
-                <label class="field-label" for="email">Email</label>
-                <input id="email" name="email" type="email" class="input" placeholder="Email" required>
-              </div>
+    <div>
+      <label class="field-label" for="name">Your Name</label>
+      <input id="name" name="name" type="text" class="input" placeholder="Your Name" required>
+    </div>
 
-              <div>
-                <label class="field-label" for="mobile">Mobile No.</label>
-                <input id="mobile" name="mobile" type="tel" class="input" placeholder="Mobile No." required>
-              </div>
+    <div>
+      <label class="field-label" for="email">Email</label>
+      <input id="email" name="email" type="email" class="input" placeholder="Email" required>
+    </div>
 
-              <div>
-                <label class="field-label" for="org">Organization Name</label>
-                <input id="org" name="organization" type="text" class="input" placeholder="Organization Name">
-              </div>
+    <div>
+      <label class="field-label" for="mobile">Mobile No.</label>
+      <input id="mobile" name="mobile" type="tel" class="input" placeholder="Mobile No." required>
+    </div>
 
-              <div class="full-row">
-                <label class="field-label" for="message">Message (optional)</label>
-                <textarea id="message" name="message" class="textarea" placeholder="Tell us about your requirement..."></textarea>
-              </div>
+    <div>
+      <label class="field-label" for="org">Organization Name</label>
+      <input id="org" name="organization" type="text" class="input" placeholder="Organization Name">
+    </div>
 
-              <div class="full-row submit-wrap">
-                <!-- Real submit button. It will submit to the action above. You can also replace with a link to booking page if you prefer -->
-                <button type="submit" class="btn-submit">SUBMIT FOR CONSULTATION <span class="arrow">→</span></button>
-              </div>
-            </div>
-          </form>
+    <div class="full-row">
+      <label class="field-label" for="message">Message (optional)</label>
+      <textarea id="message" name="message" class="textarea" placeholder="Tell us about your requirement..."></textarea>
+    </div>
+
+    <div class="full-row submit-wrap">
+      <button type="submit" class="btn-submit">SUBMIT FOR CONSULTATION <span class="arrow">→</span></button>
+    </div>
+
+  </div>
+</form>
+
         </div>
 
       </div>
