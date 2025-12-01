@@ -175,3 +175,130 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
   .call-btn-large,.call-btn{width:100%;text-align:center}
 }
 
+
+/* ===== POSTS GRID OVERRIDES (append at end of your main CSS) ===== */
+
+/* local variables to avoid interfering with global styles */
+:root {
+  --posts-accent: #d4af37;
+  --posts-nav: #07173a;
+  --posts-muted: #6b7280;
+  --posts-radius: 6px;
+}
+
+/* grid layout for posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+  width: 100%;
+}
+
+/* responsive breakpoints */
+@media (max-width: 992px) {
+  .posts-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+@media (max-width: 640px) {
+  .posts-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* card base - targets your existing .post class */
+.post {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--posts-radius);
+  overflow: visible;
+  box-shadow: 0 1px 0 rgba(11,22,48,0.06);
+  min-height: 100%;
+}
+
+/* image container - makes the badge positioned relative to the image */
+.post .thumb {
+  position: relative; /* IMPORTANT: makes badge position relative */
+  width: 100%;
+  height: 190px;      /* consistent card heights */
+  overflow: hidden;
+  border-top-left-radius: var(--posts-radius);
+  border-top-right-radius: var(--posts-radius);
+}
+
+/* images crop consistently */
+.post .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* date badge styling; your existing .badge-blue/.badge-gold classes remain usable */
+.post .date {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: rgba(7,23,58,0.95);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(7,23,58,0.12);
+  z-index: 2;
+}
+
+/* ensure the <a> inside date is styled like text (keeps your anchor) */
+.post .date a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* card body below image */
+.post .card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+/* small accent bar under thumbnail (like your example) */
+.post .card-body::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 6px;
+  background: var(--posts-accent);
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+/* title link */
+.post .card-body h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--posts-nav);
+  font-weight: 700;
+}
+.post .card-body h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.post .card-body h3 a:hover {
+  text-decoration: underline;
+}
+
+/* limit title lines so cards remain tidy */
+.post .card-body h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* small safety override if there are rogue absolute rules earlier */
+.post .date { position: absolute !important; }
+.post .thumb { position: relative !important; }
+
