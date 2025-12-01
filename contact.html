@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Anurag Consultancy</title>
+
+  <!-- keep same fonts as your site -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- keep your main stylesheet unchanged -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Scoped styles for the contact page (append-only; does NOT change main.css) -->
+  <style>
+    :root{
+      --contact-bg: #bdc4d0; /* light bluish gray similar to screenshot */
+      --panel-bg: #ffffff;
+      --accent: #ff9f00; /* orange used for submit */
+      --accent-dark: #f59c00;
+      --text-dark: #0b1630;
+      --muted: #6b7280;
+      --radius: 6px;
+      --container-width: 920px;
+    }
+
+    html,body{height:100%;margin:0;font-family:"Open Sans", Arial, sans-serif;color:var(--text-dark);background:var(--contact-bg);}
+    .contact-hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+    }
+
+    .contact-panel{
+      width:100%;
+      max-width:var(--container-width);
+      background:transparent; /* keep background of hero visible but we'll center the white form */
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:28px;
+    }
+
+    .contact-head{
+      text-align:center;
+      margin-bottom:8px;
+    }
+    .contact-head h1{
+      margin:0;
+      font-family: "Montserrat", sans-serif;
+      font-weight:600;
+      font-size:26px;
+      color:var(--text-dark);
+    }
+    .contact-head p{
+      margin:12px 0 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* the white form box */
+    .contact-form-wrap{
+      width:100%;
+      background:var(--panel-bg);
+      border-radius:10px;
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(11,22,48,0.12);
+      box-sizing:border-box;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:16px;
+      align-items:start;
+    }
+
+    @media (max-width:880px){
+      .form-grid{ grid-template-columns: 1fr; }
+    }
+
+    .input{
+      width:100%;
+      display:block;
+      padding:14px 16px;
+      border-radius:6px;
+      border:1px solid #ececec;
+      background:#f7f7f7;
+      font-size:14px;
+      color:var(--text-dark);
+      box-sizing:border-box;
+    }
+
+    .textarea{
+      width:100%;
+      min-height:120px;
+      padding:14px 16px;
+      border-radius:6px;
+      border:1px solid #ececec;
+      background:#f7f7f7;
+      font-size:14px;
+      color:var(--text-dark);
+      box-sizing:border-box;
+      resize:vertical;
+    }
+
+    .submit-wrap{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .btn-submit{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      max-width:860px;
+      height:56px;
+      font-family:"Montserrat",sans-serif;
+      font-size:20px;
+      font-weight:700;
+      color:#fff;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      text-decoration:none;
+      letter-spacing:1px;
+      box-shadow: 0 6px 18px rgba(245,156,0,0.18);
+    }
+
+    .btn-submit .arrow{
+      display:inline-block;
+      margin-left:14px;
+      font-size:20px;
+      opacity:0.95;
+    }
+
+    /* small spacing for form rows below the grid */
+    .full-row{ grid-column: 1 / -1; }
+
+    /* subtle label above fields (optional) */
+    .field-label{
+      display:block;
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:8px;
+      font-weight:600;
+    }
+
+    /* small helper: center thin orange short bar under heading like screenshot */
+    .accent-bar{ width:36px; height:6px; background:var(--accent); border-radius:4px; margin:14px auto 0; }
+
+    /* small rights: make sure anchor looks like button as well if user hits link */
+    .btn-submit:focus, .btn-submit:active {
+      outline: none;
+      transform: translateY(0.5px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal header link back to home (keeps your header intact if you include it externally) -->
+  <header style="display:none"></header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-panel">
+
+        <div class="contact-head">
+          <h1>Ask Solution From India's Best Business Consultant</h1>
+          <div class="accent-bar" aria-hidden="true"></div>
+          <p>Consult with Mr.Thamizh and take your business to the next level</p>
+        </div>
+
+        <div class="contact-form-wrap" role="region" aria-labelledby="contact-heading">
+          <!-- The form posts to a placeholder. Replace action with your real endpoint or mail handler -->
+          <form action="/submit-contact" method="post" novalidate>
+            <div class="form-grid">
+              <div>
+                <label class="field-label" for="name">Your Name</label>
+                <input id="name" name="name" type="text" class="input" placeholder="Your Name" required>
+              </div>
+
+              <div>
+                <label class="field-label" for="email">Email</label>
+                <input id="email" name="email" type="email" class="input" placeholder="Email" required>
+              </div>
+
+              <div>
+                <label class="field-label" for="mobile">Mobile No.</label>
+                <input id="mobile" name="mobile" type="tel" class="input" placeholder="Mobile No." required>
+              </div>
+
+              <div>
+                <label class="field-label" for="org">Organization Name</label>
+                <input id="org" name="organization" type="text" class="input" placeholder="Organization Name">
+              </div>
+
+              <div class="full-row">
+                <label class="field-label" for="message">Message (optional)</label>
+                <textarea id="message" name="message" class="textarea" placeholder="Tell us about your requirement..."></textarea>
+              </div>
+
+              <div class="full-row submit-wrap">
+                <!-- Real submit button. It will submit to the action above. You can also replace with a link to booking page if you prefer -->
+                <button type="submit" class="btn-submit">SUBMIT FOR CONSULTATION <span class="arrow">→</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
