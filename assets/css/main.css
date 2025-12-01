@@ -22,8 +22,8 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 
 /* LOGO: .brand-logo-img in your HTML — set to medium (48px) */
 .brand-logo-img{
-  width:50px;        /* MEDIUM SIZE */
-  height:50px;
+  width:57px;        /* MEDIUM SIZE */
+  height:57px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -43,8 +43,8 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 /* Slightly smaller on small screens */
 @media (max-width:640px){
   .brand-logo-img{
-    width:42px;
-    height:42px;
+    width:46px;
+    height:46px;
   }
 }
 
