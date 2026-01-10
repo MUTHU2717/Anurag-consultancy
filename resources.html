@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources | Anurag Consultancy</title>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    body{
+      margin:0;
+      padding-top:120px;
+      background:#ffffff;
+      font-family:'Open Sans', Arial, sans-serif;
+      color:#071033;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header{
+      background:#ffffff;
+      padding:40px 22px 20px;
+    }
+
+    .page-header h1{
+      max-width:1150px;
+      margin:0 auto;
+      font-size:32px;
+      font-family:'Montserrat', sans-serif;
+    }
+
+    /* ===== GRID ===== */
+    .resources-grid{
+      max-width:1150px;
+      margin:0 auto 60px;
+      padding:22px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:36px;
+    }
+
+    @media(max-width:992px){
+      .resources-grid{ grid-template-columns:repeat(2,1fr); }
+    }
+
+    @media(max-width:640px){
+      .resources-grid{ grid-template-columns:1fr; }
+    }
+
+    /* ===== CARD ===== */
+    .resource-card{
+      position:relative;
+      text-align:center;
+    }
+
+    .resource-card img{
+      width:100%;
+      border-radius:6px;
+      display:block;
+    }
+
+    /* date badge */
+    .badge{
+      position:absolute;
+      top:12px;
+      right:12px;
+      background:#0b1d3a;
+      color:#fff;
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:4px;
+      font-weight:600;
+    }
+
+    /* overlay */
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(11,29,58,0.85);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      transition:.3s;
+      border-radius:6px;
+    }
+
+    .resource-card:hover .overlay{
+      opacity:1;
+    }
+
+    .overlay a{
+      color:#fff;
+      font-weight:600;
+      text-decoration:none;
+      border-bottom:2px solid #d4af37;
+      padding-bottom:4px;
+    }
+
+    /* title */
+    .resource-title{
+      margin-top:14px;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .underline{
+      width:22px;
+      height:3px;
+      background:#f5a000;
+      margin:8px auto 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-header">
+  <h1>Resources</h1>
+</section>
+
+<!-- ===== RESOURCES GRID ===== -->
+<section class="resources-grid">
+
+  <!-- CARD 1 -->
+  <div class="resource-card">
+    <span class="badge">1 July</span>
+    <img src="differentiate.jpg" alt="Differentiate or Die">
+    <div class="overlay">
+      <a href="#">See more</a>
+    </div>
+    <div class="resource-title">Differentiate or Die Book Review</div>
+    <div class="underline"></div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="resource-card">
+    <span class="badge">1 July</span>
+    <img src="secret-sale.jpg" alt="Secrets of Closing Sale">
+    <div class="overlay">
+      <a href="#">See more</a>
+    </div>
+    <div class="resource-title">Secret of Closing Sale</div>
+    <div class="underline"></div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="resource-card">
+    <span class="badge">1 July</span>
+    <img src="rich-dad.jpg" alt="Rich Dad Poor Dad">
+    <div class="overlay">
+      <a href="#">See more</a>
+    </div>
+    <div class="resource-title">Rich Dad and Poor Dad</div>
+    <div class="underline"></div>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="resource-card">
+    <span class="badge">19 June</span>
+    <img src="greatness-guide.jpg" alt="Greatness Guide">
+    <div class="overlay">
+      <a href="#">See more</a>
+    </div>
+    <div class="resource-title">Greatness Guide</div>
+    <div class="underline"></div>
+  </div>
+
+  <!-- CARD 5 -->
+  <div class="resource-card">
+    <span class="badge">19 June</span>
+    <img src="lean-startup.jpg" alt="Lean Startup">
+    <div class="overlay">
+      <a href="#">See more</a>
+    </div>
+    <div class="resource-title">Lean Startup</div>
+    <div class="underline"></div>
+  </div>
+
+</section>
+
+</body>
+</html>
