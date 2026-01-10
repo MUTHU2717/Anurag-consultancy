@@ -302,3 +302,50 @@ html,body{height:100%;margin:0;font-family: 'Open Sans', Arial, sans-serif;color
 .post .date { position: absolute !important; }
 .post .thumb { position: relative !important; }
 
+/* SERVICES DROPDOWN */
+.services-menu{
+  position:relative;
+}
+
+.services-link{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.services-dropdown{
+  position:absolute;
+  top:100%;
+  left:0;
+  width:280px;
+  background:#fff;
+  border-radius:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  padding:10px;
+  display:none;
+  z-index:999;
+}
+
+.services-menu:hover .services-dropdown{
+  display:block;
+}
+
+.service-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px;
+  text-decoration:none;
+  color:#071033;
+  border-radius:4px;
+  font-size:14px;
+}
+
+.service-box:hover{
+  background:#f2f2f2;
+}
+
+.service-icon{
+  font-size:18px;
+}
