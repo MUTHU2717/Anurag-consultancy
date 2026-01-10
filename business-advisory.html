@@ -9,6 +9,43 @@
   <link rel="stylesheet" href="assets/css/main.css">
 
   <style>
+     /* ===== PAGE BACKGROUND ===== */
+    body{
+      background:#f5f6f8;
+      margin:0;
+      font-family:'Open Sans', Arial, sans-serif;
+      color:#071033;
+    }
+
+    /* ===== HERO / HEADER ===== */
+    .service-hero{
+      background:linear-gradient(135deg, #1a0f0f, #2a1a1a);
+      color:#ffffff;
+      padding:60px 22px;
+    }
+
+    .service-hero .container{
+      max-width:1150px;
+      margin:0 auto;
+    }
+
+    .service-hero h1{
+      margin:10px 0 0;
+      font-size:34px;
+      font-family:'Montserrat', sans-serif;
+    }
+
+    .breadcrumb{
+      font-size:14px;
+      color:rgba(255,255,255,0.85);
+    }
+
+    .breadcrumb a{
+      color:#d4af37;
+      text-decoration:none;
+      font-weight:600;
+    }
+    
     .service-page{
       max-width:1150px;
       margin:0 auto;
@@ -44,6 +81,19 @@
       padding:22px;
       margin:40px 0;
       font-weight:600;
+    }
+    
+     /* ===== BACK LINK ===== */
+    .back-link{
+      display:inline-block;
+      margin-top:30px;
+      font-weight:600;
+      color:#1a0f0f;
+      text-decoration:none;
+    }
+
+    .back-link:hover{
+      text-decoration:underline;
     }
   </style>
 </head>
@@ -235,6 +285,8 @@ By offering comprehensive human resources advisory services, we help businesses 
 and create a work environment that drives productivity, satisfaction, and long-term success.
 </p>
 
+  <a href="javascript:history.back()" class="back-link">← Back to Services</a>
+  
 </section>
 
 </body>
